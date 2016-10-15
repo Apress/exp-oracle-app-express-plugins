@@ -1,0 +1,1 @@
+Updates for the plug-ins in this book can be found at http://plugins.clarifit.com. There will be links there to download them from http://apex-plugin.com.

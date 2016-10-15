@@ -1,0 +1,49 @@
+<script src="jquery-1.6.1.min.js" type="text/javascript"></script> 
+<script src="jquery-ui-1.8.13.min.js" type="text/javascript"></script> 
+<script src="jquery.ui.toggleFontSize.js" type="text/javascript"></script> 
+<script src="$console_wrapper_1.0.3.js" type="text/javascript"></script> 
+
+<span id="foo">foo</span><br>
+<span id="bar">bar</span><br><br>
+
+<p>Run this in Firefox with Firebug installed and console running (F12) and follow along with chapter 8.</p>
+<ol>
+  <li><a href="javascript:createDefault();">$('#bar').toggleFontSize();</a></li>
+  <li><a href="javascript:createDefault();">$('#bar').toggleFontSize();</a></li>
+  <li><a href="javascript:getFontSize();">$('#bar').toggleFontSize('option', 'toggleFontSize');</a><span style="font-style: italic"> Getter</span></li>
+  <li><a href="javascript:setFontSize();">$('#bar').toggleFontSize('option', 'toggleFontSize','200px');</a><span style="font-style: italic"> Setter</span></li>
+  <li><a href="javascript:createDefault();">$('#bar').toggleFontSize();</a></li>
+  <li><a href="javascript:destroy();">$('#bar').toggleFontSize('destroy');</a></li>
+  <li><a href="javascript:create80();">$('#bar').toggleFontSize({toggleFontSize: '80px'});</a></li>
+  <li><a href="javascript:getBaseFontSize();">$('#bar').toggleFontSize('getBaseFontSize');</a></li>
+</ol>
+
+
+<script type="text/javascript">
+function create80(){
+  $('#bar').toggleFontSize({toggleFontSize: '80px'});
+}
+
+function createDefault(){
+  $('#bar').toggleFontSize();
+}
+
+function destroy(){
+  $('#bar').toggleFontSize('destroy');
+}
+
+function getFontSize(){
+  $.console.log($('#bar').toggleFontSize('option', 'toggleFontSize'));
+}
+
+function setFontSize(){
+  $.console.log($('#bar').toggleFontSize('option', 'toggleFontSize', '200px'));
+}
+
+function getBaseFontSize(){
+  $.console.log($('#bar').toggleFontSize('getBaseFontSize'));
+}
+
+//Manually enable logging output
+$.console.setLevel('debug');
+</script> 
